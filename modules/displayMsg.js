@@ -77,10 +77,10 @@ function dispalyMsg(msg,contacts,bot) {
 
     //写文件
     function writeFile (res, type) {
-        if(!fs.existsSync(`./${fromUser}`)) {
-            fs.mkdirSync(`./${fromUser}`)
+        if(!fs.existsSync(`./chatRes/${fromUser}`)) {
+            fs.mkdirSync(`./chatRes/${fromUser}`)
         }
-        fs.writeFileSync(`./${fromUser}/${msg.MsgId}.${type}`, res.data)
+        fs.writeFileSync(`./chatRes/${fromUser}/${msg.MsgId}.${type}`, res.data)
     }
 
     main()
